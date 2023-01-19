@@ -1,0 +1,7 @@
+summary: Outputs a json map of audio items to duration in seconds
+description: |
+  by running ffprobe and caching
+options:
+  force:
+    description: force a download even if files exist
+    type: bool

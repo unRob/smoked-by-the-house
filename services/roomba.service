@@ -1,0 +1,18 @@
+[Unit]
+Description=Roomba
+Requires=network.target
+After=network.target
+
+[Service]
+User=roberto
+Group=roberto
+WorkingDirectory=/var/lib/sbth/code
+ExecStartPre=/bin/bash -c 'until host google.com; do sleep 1; done'
+ExecStart=node dist/roomba.js
+# allow a minute before force shutdown
+TimeoutStopSec=60
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

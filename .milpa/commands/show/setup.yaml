@@ -1,0 +1,4 @@
+# see `milpa help docs command spec` for all the options
+summary: sets up the raspberry pi
+description: |
+  installs a bunch of shit and configures it

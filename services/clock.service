@@ -1,0 +1,19 @@
+[Unit]
+Description=Servicio de reloj
+Requires=speaker.service
+After=speaker.service
+
+[Service]
+User=roberto
+Group=roberto
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+# Environment=DEBUG=true
+WorkingDirectory=/var/lib/sbth/code
+ExecStart=milpa show clock run --enable-counters
+# force kill after a minute if stuck
+TimeoutStopSec=60
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

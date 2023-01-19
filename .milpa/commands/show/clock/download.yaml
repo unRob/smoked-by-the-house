@@ -1,0 +1,7 @@
+summary: Downloads files for the clock
+description: |
+  from https://1194online.com
+options:
+  force:
+    description: force a download even if files exist
+    type: bool

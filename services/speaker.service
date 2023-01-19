@@ -1,0 +1,17 @@
+[Unit]
+Description=Se busca conectar al speaker
+After=bluetooth.service
+
+[Service]
+User=roberto
+Group=roberto
+Environment=SPEAKER_MAC=78:5E:A2:03:C9:22
+WorkingDirectory=/var/lib/sbth/code
+ExecStart=milpa show speaker keep-connecting "$SPEAKER_MAC"
+ExecStartPost=/usr/bin/timeout 30 milpa show speaker wait-for-connection "$SPEAKER_MAC"
+TimeoutStopSec=70
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

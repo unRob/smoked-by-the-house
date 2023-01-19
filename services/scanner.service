@@ -1,0 +1,15 @@
+[Unit]
+Description=Servicio de scanner
+
+[Service]
+User=roberto
+Group=roberto
+WorkingDirectory=/var/lib/sbth/code
+ExecStart=milpa scanner run
+# allow a few seconds before force shutdown
+TimeoutStopSec=20
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

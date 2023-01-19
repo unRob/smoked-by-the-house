@@ -1,0 +1,7 @@
+summary: runs the clock continuously
+description: |
+  Tells the time every 10 seconds
+options:
+  enable-counters:
+    description: enables keeping track of times we say the time to a log
+    type: bool

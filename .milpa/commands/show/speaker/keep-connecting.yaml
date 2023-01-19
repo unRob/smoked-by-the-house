@@ -1,0 +1,15 @@
+# see `milpa help docs command spec` for all the options
+summary: Tries to connect to the speaker
+description: |
+  Will keep alive until it can't connect to the speaker
+arguments:
+  - name: address
+    description: The speaker's mac address. should already be paired
+    required: true
+options:
+  wait:
+    description: the amount of seconds to wait before giving up
+    default: "10"
+  refresh:
+    description: the amount of seconds to wait before refreshing connection status
+    default: "60"

@@ -1,0 +1,18 @@
+[Unit]
+Description=Servicio de vacbot para yeedi
+Requires=network.target
+After=network.target
+
+[Service]
+User=roberto
+Group=roberto
+WorkingDirectory=/var/lib/sbth/code
+ExecStartPre=/bin/bash -c 'until host gl-mx-api.yeedi.com; do sleep 1; done'
+ExecStart=node dist/yeedi.js
+# allow five minutes for browser to close
+TimeoutStopSec=300
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

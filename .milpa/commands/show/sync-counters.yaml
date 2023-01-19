@@ -1,0 +1,3 @@
+summary: syncs counters up to bastion
+description: |
+  with rsync

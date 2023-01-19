@@ -1,0 +1,31 @@
+{
+  "name": "smoked-by-the-house",
+  "version": "0.0.0",
+  "description": "©️ 2022 Julia Rometti",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./dist && git reset --hard origin/main && git pull && npm run clean && npm run build",
+    "build": "tsc",
+    "clock": "node dist/clock.js",
+    "yeedi": "node dist/yeedi.js",
+    "roomba": "node dist/roomba.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roberto Hidalgo",
+  "license": "ISC",
+  "dependencies": {
+    "dorita980": "^3.1.11",
+    "ecovacs-deebot": "^0.8.3",
+    "node-machine-id": "^1.1.12",
+    "puppeteer-core": "^17.1.3",
+    "tone": "^14.7.77",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.7.17",
+    "@types/puppeteer-core": "^5.4.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3"
+  }
+}

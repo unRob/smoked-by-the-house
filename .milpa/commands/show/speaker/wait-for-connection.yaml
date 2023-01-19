@@ -1,0 +1,7 @@
+summary: Waits for the speaker to be connected
+description: |
+  Checks every second for the speaker to be connected
+arguments:
+  - name: address
+    description: The speaker's mac address. should already be paired
+    required: true

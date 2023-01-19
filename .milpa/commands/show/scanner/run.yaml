@@ -1,0 +1,7 @@
+summary: runs the scanner continuosly
+description: |
+  Scans the void and repeats
+options:
+  enable-counters:
+    description: enables keeping track of times we say the time to a log
+    type: bool

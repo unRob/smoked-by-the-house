@@ -1,0 +1,11 @@
+summary: Ensures show is doing what it should
+description: |
+  Makes sure services are started/stopped at the right times and counters are flushed
+
+options:
+  start-at:
+    description: a HH:MM 24h time when show should start running
+    default: "9:45"
+  stop-at:
+    description: a HH:MM 24h time when show should stop running
+    default: "17:45"
